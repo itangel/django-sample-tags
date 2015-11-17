@@ -1,0 +1,9 @@
+<html>
+<body>
+	<h1>Book List</h1>
+	{% for object in object_list %}
+	<p>Title: {{ object.title }}, Tags: {% for tag in object.tags.all %}{{ tag.name }}, {% endfor %}</p>
+	{% endfor %}
+	<a href="{% url 'index' %}">Back</a>
+</body>
+</html>
